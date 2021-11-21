@@ -93,7 +93,8 @@ Configuration:
                                  WARNING: If the --config-path flag is provided, this preset will be ignored.  [string] [choices: "perf", "experimental", "desktop"]
   --chrome-flags                 Custom flags to pass to Chrome (space-delimited). For a full list of flags, see https://bit.ly/chrome-flags
                                  Additionally, use the CHROME_PATH environment variable to use a specific Chrome binary. Requires Chromium version 66.0 or later. If omitted, any detected Chrome Canary or Chrome stable will be used.  [string] [default: ""]
-  --port                         The port to use for the debugging protocol. Use 0 for a random port  [number] [default: 0]
+  --port                         The port to use for the debugging protocol. Use 0 for a random port  [number] [default: 0].
+                                 If the port is in use by "chrome --remote-debugging-port=" the existing instance will be used instead of makeing a new one.
   --hostname                     The hostname to use for the debugging protocol.  [string] [default: "localhost"]
   --form-factor                  Determines how performance metrics are scored and if mobile-only audits are skipped. For desktop, --preset=desktop instead.  [string] [choices: "mobile", "desktop"]
   --screenEmulation              Sets screen emulation parameters. See also --preset. Use --screenEmulation.disabled to disable. Otherwise set these 4 parameters individually: --screenEmulation.mobile --screenEmulation.width=360 --screenEmulation.height=640 --screenEmulation.deviceScaleFactor=2
